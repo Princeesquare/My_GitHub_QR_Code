@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import qrCode from "qr-image";
-import fs from "fs";
+import "fs";
 
 inquirer
   .prompt([
@@ -17,7 +17,7 @@ inquirer
     fs.writeFile("qr-url.txt", url, function (err) {
       if (err) throw err;
       console.log(
-        "QR code has been generated and saved as 'qr_image.png' and URL has been saved as 'qr-url.txt'"
+        "QR code has been generated and saved as 'qr_code.png' and URL has been saved as 'qr-url.txt'"
       ); // success message to show the user
     });
   })
